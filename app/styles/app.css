@@ -1,3 +1,97 @@
 html, body {
-  margin: 20px;
+  margin: 0 10px 100px 10px;
+  padding: 0 0 200px 0;
+  font-family: 'Rock Salt', cursive;
+  background: #ddd;
+  height: 100%;
+}
+
+body{
+width: inherit;
+}
+
+h2{
+  font-family: 'Open Sans', sans-serif;
+  color: #606060;
+}
+
+.input-box{
+  margin: 10px ;
+}
+
+.input-sticky{
+  width: 250px;
+  margin: 0 auto;
+}
+
+button{
+  font-family: 'Open Sans', sans-serif;
+  padding: 2px 10px;
+  float: right;
+  margin: -24px -17px 10px 10px;
+  background: #D10961;
+  border: 1px solid #444;
+  border-radius: 3px;
+  shadow: 5px;
+  color: #ddd;
+  outline: none;
+}
+
+hr{
+  margin: 20px 0 0 0;
+  color: #606060;
+  outline: none;
+  border-style: dashed;
+  display: block;
+  clear: both;
+}
+
+textarea{
+  font-family: 'Rock Salt', cursive;
+  width: 250px;
+  height: 182px;
+  background: #ffde4c;
+  padding: 0 10px 10px 10px;
+  resize: none;
+  margin: 0 auto 0 auto;
+  outline: none;
+  font-size: 12pt;
+  display: block;
+  border-style: none;
+overflow: hidden;
+}
+
+input{
+  font-family: 'Rock Salt', cursive;
+  width: 250px;
+  height: 38px;
+  background: #ffde4c;
+  padding: 5px 10px 0 10px;
+  resize: disabled;
+  margin: 0 auto 0 auto;
+  outline: none;
+  font-size: 12pt;
+  display: block;
+  border-style: none;
+}
+
+.sticky-box{
+  display: inline;
+  margin: 10px 10px 10px 10px;
+  float: left;
+}
+
+.sticky{
+  font-size: 12pt;
+  width: 250px;
+  height: 220px;
+  padding: 5px 10px 10px 10px;
+  background: #ffde4c;
+  box-shadow: 2px 2px 5px 0 #333;
+  overflow: scroll;
+}
+
+.for-shadow{
+  width: 270px;
+  box-shadow: 2px 2px 5px 0 #333;
 }

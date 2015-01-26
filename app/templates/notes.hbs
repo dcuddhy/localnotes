@@ -1,0 +1,27 @@
+<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+{{outlet}}
+
+<div class = "input-box">
+  <h2 id='title'>Local Notes</h2>
+  <div class = "input-sticky">
+    <div class = "for-shadow">
+      {{input placeholder="Add a title!" value=noteTitle }}
+      {{textarea placeholder="Write a note!" value=noteBody }}
+    </div>
+    <button {{action 'newNote'}}> Save </button>
+  </div>
+  <hr>
+</div>
+
+
+{{#each note in model}}
+<div class = "sticky-box">
+  <div class= "sticky">
+    {{note.title}}<br>
+    {{note.body}}
+  </div>
+</div>
+
+{{/each}}

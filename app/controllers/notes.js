@@ -4,6 +4,7 @@ export default Ember.ArrayController.extend({
   reversedNotes: function () {
   },
 
+
   actions: {
     newNote: function() {
       var body = this.get('noteBody');
@@ -14,6 +15,7 @@ export default Ember.ArrayController.extend({
         this.set('noteBody', '');
         this.set('noteTitle', '');
         note.save();
+        this.flashMessage('huzzah!', '', 1500)
 
       }
     },

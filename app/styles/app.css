@@ -59,7 +59,7 @@ textarea{
   font-size: 12pt;
   display: block;
   border-style: none;
-overflow: hidden;
+  overflow: hidden;
 }
 
 input{

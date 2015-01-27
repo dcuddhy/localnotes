@@ -1,6 +1,9 @@
 import Ember from "ember";
 
 export default Ember.ArrayController.extend({
+  reversedNotes: function () {
+  },
+
   actions: {
     newNote: function() {
       var body = this.get('noteBody');
@@ -11,7 +14,16 @@ export default Ember.ArrayController.extend({
         this.set('noteBody', '');
         this.set('noteTitle', '');
         note.save();
+
       }
+    },
+
+    deleteNote: function (id) {
+      var note = this.store.find('note', id).then(function(note) {
+        note.deleteRecord();
+        note.save();
+      });
     }
+
   }
 });

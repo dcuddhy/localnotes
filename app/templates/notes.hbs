@@ -27,8 +27,8 @@
 
 {{#each note in model}}
   <div class = "sticky-box">
-      <span class = "delete fa fa-times-circle" {{action 'deleteNote' note.id}}></span>
     <div class= "sticky">
+      <span class = "delete fa fa-times-circle" {{action 'deleteNote' note.id}}></span>
       {{note.title}}<br>
       {{note.body}}
     </div>

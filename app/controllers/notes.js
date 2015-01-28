@@ -2,6 +2,7 @@ import Ember from "ember";
 
 export default Ember.ArrayController.extend({
   reversedNotes: function () {
+
   },
 
 
@@ -11,11 +12,10 @@ export default Ember.ArrayController.extend({
       var title = this.get('noteTitle');
       if (body || title) {
         var note = this.store.createRecord('note', { body: body, title: title });
-
         this.set('noteBody', '');
         this.set('noteTitle', '');
         note.save();
-        this.flashMessage('huzzah!', '', 1500)
+        this.flashMessage('huzzah!', '', 1500);
 
       }
     },

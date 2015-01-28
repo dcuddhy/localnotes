@@ -1,3 +1,5 @@
+
+
 html, body {
   margin: 0 10px 100px 10px;
   font-family: 'Rock Salt', cursive;
@@ -36,25 +38,23 @@ h2{
 }
 
 .input-box{
-  margin: 10px;
 
+	@media (min-width: 1200px) {
+		width: 1140px;
+	}
 
-@media (min-width: 1200px) {
-	width: 1140px;
-}
+	@media (max-width: 1199px) {
+	width: 850px;
+	}
 
-@media (max-width: 1199px) {
-width: 850px;
-}
+	@media (max-width: 900px) {
+		width: 560px;
+	}
 
-@media (max-width: 900px) {
-	width: 560px;
-}
-
-@media (max-width: 600px) {
-	width: 250px;
-}
-
+	@media (max-width: 600px) {
+    margin: 10px;
+		width: 250px;
+	}
 
 }
 
@@ -78,13 +78,14 @@ width: 850px;
 }
 
 hr{
-  margin: 20px 0 0 0;
+  margin: 20px -10px 0 10px;
   color: #606060;
   outline: none;
   border-style: dashed;
   display: block;
   clear: both;
 	@media (max-width: 600px) {
+  margin: 20px 0 0 0;
 	width: 270px;
 	}
 }

@@ -1,51 +1,33 @@
 <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-
-
-
-
-
-
-
-
-
   <h2 id='title'>Local Notes</h2>
-<div class = "input-box">
-  <div class = "input-sticky">
-    {{message-queue}}
-    <div class = "for-shadow">
-      {{input placeholder="Add a title!" value=noteTitle }}
-      {{textarea placeholder="Write a note!" value=noteBody }}
+  <div class = "input-box">
+    <div class = "input-sticky">
+      {{message-queue}}
+      <div class = "for-shadow">
+        {{input placeholder="Add a title!" value=noteTitle }}
+        {{textarea placeholder="Write a note!" value=noteBody }}
+      </div>
+      <span class = "save fa fa-check-circle" {{action 'newNote'}}></span>
     </div>
-    <span class = "save fa fa-check-circle" {{action 'newNote'}}></span>
+    <hr>
   </div>
-  <hr>
-</div>
 
-
-<div class = "sticky-box">
-  <div class = "sticky">
-    {{noteTitle}}<br>
-    {{noteBody}}
-  </div>
-</div>
-
-
-
-{{#each note in model}}
   <div class = "sticky-box">
-    <div class= "sticky">
-      <span class = "delete fa fa-times-circle" {{action 'deleteNote' note}}></span>
-      {{note.title}}<br>
-      {{note.body}}
+    <div class = "sticky">
+      {{noteTitle}}<br>
+      {{noteBody}}
     </div>
   </div>
 
-{{/each}}
+  {{#each note in model}}
+    <div class = "sticky-box">
+      <div class= "sticky">
+        {{local-note note=note deleteNote="deleteNote"}}
+      </div>
+    </div>
+  {{/each}}
 
-{{#each note in model}}
-    {{local-note note=note deleteNote="deleteNote"}}
-{{/each}}
 
-{{outlet}}<br><br><br><br><br><br><br>
+{{outlet}}

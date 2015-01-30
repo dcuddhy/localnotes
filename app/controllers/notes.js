@@ -5,7 +5,6 @@ export default Ember.ArrayController.extend({
 
   },
 
-
   actions: {
     newNote: function() {
       var body = this.get('noteBody');
@@ -15,16 +14,14 @@ export default Ember.ArrayController.extend({
         this.set('noteBody', '');
         this.set('noteTitle', '');
         note.save();
-        this.flashMessage('huzzah!', '', 1500);
-
+        this.flashMessage('Huzzah!', '', 1500);
       }
     },
 
-    deleteNote: function (id) {
-      var note = this.store.find('note', id).then(function(note) {
-        note.deleteRecord();
-        note.save();
-      });
+    deleteNote: function(note) {
+      note.deleteRecord();
+      note.save();
+      this.flashMessage('Kaput!', '', 1500);
     }
 
   }

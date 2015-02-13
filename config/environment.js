@@ -17,7 +17,7 @@ module.exports = function(environment) {
 contentSecurityPolicy: {
       'default-src': "'none'",
       'script-src': "'self' 'unsafe-eval'",
-      'font-src': "'self' fonts.gstatic.com",
+      'font-src': "'self' fonts.gstatic.com maxcdn.bootstrapcdn.com",
       'connect-src': "'self' " + process.env.ADAPTER_URL,
       'img-src': "'self'",
       'style-src': "'self' 'unsafe-inline' fonts.googleapis.com maxcdn.bootstrapcdn.com",

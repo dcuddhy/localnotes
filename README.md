@@ -4,7 +4,7 @@ https://warm-island-1114.herokuapp.com/notes
 
 ## Product Description
 
-Notes joins the front and back end in a super snappy fast note taking app, was inspired by Stickies.
+Notes joins the front and back end in a super snappy fast note taking app, inspired by Stickies.
 <br><br>
 
 ## Technical Notes

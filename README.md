@@ -1,5 +1,5 @@
 ## See this project live:
-https://warm-island-1114.herokuapp.com/notes
+https://warm-island-1114.herokuapp.com
 <br><br>
 
 ## Product Description
